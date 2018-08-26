@@ -720,8 +720,8 @@ void FastText::train(const Args args) {
     if (args_->epoch <= 0) { args_->epoch = old_args_->epoch; }
     if (args_->minCount <= 0) { args_->minCount = old_args_->minCount; }
     if (args_->bucket <= 0) { args_->bucket = old_args_->bucket; }
-    if (args_->minn <= 0) { args_->minn = old_args_->minn; }
-    if (args_->maxn <= 0) { args_->maxn = old_args_->maxn; }
+    if (args_->minn < 0) { args_->minn = old_args_->minn; }
+    if (args_->maxn < 0) { args_->maxn = old_args_->maxn; }
     if (args_->lrUpdateRate <= 0) { args_->lrUpdateRate = old_args_->lrUpdateRate; }
     if (fabs(args_->t - 0.0) <= 1e-5) { args_->t = old_args_->t; }
     if (fabs(args_->lr - 0.0) <= 1e-6) { args_->lr = old_args_->lr; }
